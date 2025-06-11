@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+
+
+
+*{
+  font-family: 'Outfit', sans-serif;
+}
+
+.profile-container {
+  position: relative;
+}
+
+.profile-icon {
+  width: 2.5rem; /* equivalent to Tailwind's w-10 */
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25)); /* drop-shadow */
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  color: black;
+  border-radius: 0.25rem; /* same as Tailwind's rounded */
+  padding-top: 3rem; /* equivalent to pt-12 (3rem or 48px) */
+  display: none;
+}
+
+/* Show dropdown on hover */
+.profile-container:hover .dropdown-menu {
+  display: block;
+}
+
+.hover-box {
+  transition: all 700ms ease; /* same as transition-all + duration-700 */
+}
+
+.hover-box:hover {
+  transform: scale(1.05);
+}
+
+.custom-img {
+  border-radius: 0.25rem; /* Tailwind's 'rounded' */
+  cursor: pointer;
+  transition: transform 300ms ease-in; /* transition-all duration-300 */
+}
+
+.custom-img:hover {
+  transform: scale(1.05); /* hover:scale-x-105 */
+}
+.steps-container {
+  transition: all 300ms ease; /* same as transition-all + duration-300 */
+}
+
+.steps-container:hover {
+  transform: scale(1.02); /* same as hover:scale-[1.02] */
+}
+.placeholder-color {
+  color: #e0e0e0;
+  font-weight: 300;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  backdrop-filter: blur(4px);      /* Tailwind: backdrop-blur-sm */
+  background-color: rgba(0, 0, 0, 0.20); /* Tailwind: bg-black/30 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
